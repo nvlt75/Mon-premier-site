@@ -1,0 +1,74 @@
+/*HOME PAGE*/
+
+body {
+    /*background-color: rgb(24, 122, 161);*/
+}
+
+p {
+    font-size: 10px;
+}
+
+/*NAV MENU*/
+nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/*TOUT LES BOUTONS*/
+nav li a {
+    text-decoration: none;
+}
+
+/*TEXT DANS CHAQUE BOUTON*/
+nav li {
+    list-style-type: none;
+    margin: 10px 30px;
+}
+
+div.burger {
+    background: url(Images/Burger.png);
+    height: 25px;
+    width: 25px;
+    background-size: cover;
+    visibility: hidden;
+}
+
+div.open {
+    background: url(Images/ClosingCross.png);
+    height: 27px;
+    width: 27px;
+    background-size: cover;
+}
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 600px) {
+    body {
+      /* background-color: lightblue; */
+    }
+
+    nav {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav li {
+        text-align: center;
+    }
+
+    div.burger {
+        visibility: visible;
+
+    }
+
+    div.open + nav  {
+        display: block;
+        height: 100px;
+        transition: 1s height;
+    }
+
+    p {
+        font-size: 5px;
+    }
+  }
